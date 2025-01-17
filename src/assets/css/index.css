@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 /* position dots up a bit */
+body {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+.kode-style{
+    font-family: 'Kode Mono', monospace;
+    font-weight: 400;
+    font-style: bold;
+  }
+
 .flickity-page-dots {
   bottom: -22px;
 }

@@ -1,3 +1,5 @@
+<script setup lang="ts">
+</script>
 <template>
   <Particles
     id="tsparticles"
@@ -88,11 +90,4 @@
     }"
   />
 </template>
-
-<script>
-export default {
-  name: "particlesVue",
-};
-</script>
-
 <style></style>

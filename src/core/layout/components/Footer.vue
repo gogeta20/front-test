@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <section class="h-24 bg-white border-t-2 border-black sticky">
     <p class="font-mono text-black text-base pt-10 pl-10">
@@ -8,11 +11,5 @@
     </p>
   </section>
 </template>
-
-<script>
-export default {
-  name: "footerVue",
-};
-</script>
 
 <style></style>
