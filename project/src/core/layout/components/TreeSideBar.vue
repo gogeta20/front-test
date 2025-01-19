@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, toRefs } from "vue";
 import ItemTree from "@/core/layout/components/ItemTree.vue";
-import BaseRouterLink from "@/core/common/BaseRouterLink.vue";
+// import BaseRouterLink from "@/core/common/BaseRouterLink.vue";
 
 const props = defineProps({
   dataTree: {
