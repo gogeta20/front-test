@@ -10,7 +10,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <router-link :to="to" class="bh-base-router-link" :title="nombre" aria-hidden="true" v-bind="$attrs">
+  <router-link :to="to" class="bh-base-router-link" :title="nombre" v-bind="$attrs">
     <span>{{ nombre }} </span>
   </router-link>
 </template>
