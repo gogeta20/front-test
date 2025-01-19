@@ -2,7 +2,7 @@
   "name": "szymonb-website",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -21,6 +21,7 @@
     "postcss": "^8.3.6",
     "sass": "^1.83.4",
     "tailwindcss": "^2.2.7",
+    "ts-node": "^10.9.2",
     "vite": "^6.0.7"
   }
 }

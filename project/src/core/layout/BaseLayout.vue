@@ -34,7 +34,7 @@ const closeSideBar = () => {
 <style lang="scss" scoped>
 .page-fade-enter-active,
 .page-fade-leave-active {
-  transition: opacity 0.5s ease, filter 0.5s ease;
+  transition: opacity .8s ease, filter .8s ease;
 }
 
 .page-fade-enter-from,

@@ -13,4 +13,4 @@ app.use(router)
 app.use(createPinia())
 app.use(Particles)
 app.mount("#app")
-// createApp(App).use(Particles).mount("#app");
+

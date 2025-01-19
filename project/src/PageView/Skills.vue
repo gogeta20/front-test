@@ -23,14 +23,14 @@ const mobileSkills = desktopSkills.map((skill) => ({
 <script setup lang="ts"></script>
 <template>
   <div class="content bg-green">
-    <div class="fare-calendar">
+    <div>
       <p class="kode-style text-4xl md:text-6xl text-center text-white mb-4">Skills</p>
-      <div class="fare-rates">
+      <div class="container-tech-experience">
         <!-- Escritorio -->
-        <div class="fare-monthcontainer hidden sm:flex">
+        <div class="skills hidden sm:flex">
           <ul>
-            <li v-for="(skill, index) in desktopSkills" :key="index" class="fare-month">
-              <span class="fare-price" :class="skill.color" :style="{ height: skill.height }"></span>
+            <li v-for="(skill, index) in desktopSkills" :key="index" class="tech">
+              <span class="experience" :class="skill.color" :style="{ height: skill.height }"></span>
               <span class="ttl1">{{ skill.label }}</span>
             </li>
           </ul>
@@ -39,9 +39,9 @@ const mobileSkills = desktopSkills.map((skill) => ({
         <!-- Móvil -->
         <div class="skills-movil sm:hidden">
           <ul>
-            <li v-for="(skill, index) in mobileSkills" :key="index" class="fare-month-movil">
+            <li v-for="(skill, index) in mobileSkills" :key="index" class="tech-mobile">
               <span class="ttl1">{{ skill.label }}</span>
-              <span class="fare-price" :class="skill.color" :style="{ width: skill.width }"></span>
+              <span class="experience" :class="skill.color" :style="{ width: skill.width }"></span>
             </li>
           </ul>
         </div>
@@ -57,33 +57,33 @@ const mobileSkills = desktopSkills.map((skill) => ({
   flex-direction: column;
   gap: .5rem
 }
-.fare-month-movil{
+.tech-mobile{
   display: grid;
   grid-template-columns: 1fr 2fr;
 	margin: 0 4px;
 }
 
-.fare-month-movil span {
+.tech-mobile span {
   margin: 5px;
 }
 
- .fare-month-movil span.fare-price {
+ .tech-mobile span.experience {
 	min-height: 20px;
 	background-color: #FFF ;
 	transform-origin: 100% 100%;
 	border-radius: 3px;
 }
 
- .fare-month-movil span.fare-price.cheapest {
+ .tech-mobile span.experience.cheapest {
 	background-color: #EF3D84 ;
 }
 
- .fare-month-movil span.fare-price:hover {
+ .tech-mobile span.experience:hover {
 	background-color: #ccc ;
 	cursor: pointer;
 }
 
- .fare-month-movil span.fare-price.cheapest:hover {
+ .tech-mobile span.experience.cheapest:hover {
 	background-color: #C13773 ;
 	cursor: pointer;
 }
@@ -100,74 +100,74 @@ const mobileSkills = desktopSkills.map((skill) => ({
 	color: #fff !important;
 }
 
-.fare-rates {
+.container-tech-experience {
 	position: relative;
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.fare-monthcontainer {
+.skills {
   display: flex;
   align-items: center;
 }
 
 
- .fare-month {
+ .tech {
 	margin: 0 4px;
 	display: inline-block;
 	width: 88px;
 	text-align: center;
 }
 
- .fare-month a
-,  .fare-month span {
+ .tech a
+,  .tech span {
 	display: block;
 }
 
- .fare-month span:first-of-type {
+ .tech span:first-of-type {
 	margin-bottom: 7px;
 }
 
- .fare-month span:last-of-type {
+ .tech span:last-of-type {
 	margin: 10px 0 7px;
 }
 
- .fare-month button.btn2 {
+ .tech button.btn2 {
 	width: 60px;
 	padding-left: 0;
 	padding-right: 0;
 }
 
- .fare-month span.fare-price {
+ .tech span.experience {
 	min-height: 20px;
 	background-color: #FFF ;
 	transform-origin: 100% 100%;
 	border-radius: 3px;
 }
 
- .fare-month span.fare-price.cheapest {
+ .tech span.experience.cheapest {
 	background-color: #EF3D84 ;
 }
 
- .fare-month span.fare-price:hover {
+ .tech span.experience:hover {
 	background-color: #ccc ;
 	cursor: pointer;
 }
 
- .fare-month span.fare-price.cheapest:hover {
+ .tech span.experience.cheapest:hover {
 	background-color: #C13773 ;
 	cursor: pointer;
 }
 
 @media (max-width: 640px) {
-  .fare-month{
+  .tech{
     display: none;
   }
-  .fare-rates {
+  .container-tech-experience {
     flex-direction: row;
   }
-  .fare-month {
+  .tech {
 	  width: 28px;
   }
 }
