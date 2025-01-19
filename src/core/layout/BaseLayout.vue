@@ -18,14 +18,34 @@ const closeSideBar = () => {
 <template>
   <div>
     <ParticlesView />
-    <Header @menu-toggle="openSidBar" />
     <SideBar :isOpenSideBar="isOpenMenu" />
+
     <main @click="closeSideBar">
+      <Header @menu-toggle="openSidBar" />
       <section>
-        <RouterView />
+        <Transition name="page-fade" mode="out-in">
+          <RouterView />
+        </Transition>
       </section>
     </main>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.page-fade-enter-from,
+.page-fade-leave-to {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.page-fade-enter-to,
+.page-fade-leave-from {
+  opacity: 1;
+  filter: blur(0);
+}
+</style>

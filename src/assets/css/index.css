@@ -5,6 +5,15 @@
 body {
   font-family: 'JetBrains Mono', monospace !important;
 }
+.bg-main{
+  background-color: var(--purple-secondary);
+}
+.bg-blue{
+  background-color: var(--blue-secondary);
+}
+.bg-green{
+  background-color: var(--green-secondary);
+}
 .kode-style{
     font-family: 'Kode Mono', monospace;
     font-weight: 400;

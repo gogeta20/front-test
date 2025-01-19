@@ -23,4 +23,8 @@ defineProps<Props>();
   align-items: center;
   gap: 0.5rem;
 }
+
+.router-link-exact-active {
+  background-color: var(--purple-secondary)
+}
 </style>

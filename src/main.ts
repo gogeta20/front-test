@@ -1,5 +1,6 @@
 import "@/assets/css/index.css";
 import "@/assets/scss/main.scss";
+import "flickity/css/flickity.css";
 
 import { createApp } from "vue";
 import { createPinia } from 'pinia'
