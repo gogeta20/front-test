@@ -1,17 +1,62 @@
-**.idea/
-**.vscode/
-**.vite/
+# Archivos de configuración de IDE y editores
+**/.idea/
+**/.vscode/
+*.sublime-project
+*.sublime-workspace
 
 # Dependencias de Node.js (Vue.js)
 **/node_modules/
 **/.pnpm-store/
+**/.vite/
 **/pnpm-lock.yaml
+
+# Dependencias de PHP (Symfony)
+**/vendor/
+
+# Archivos de entorno Python (Django)
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Archivos de log y caché
 *.log
 *.cache
 *.bak
 *.pdf
+
+# Archivos de migración de Django
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos de configuración específicos del sistema
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de compilación de Java (Spring Boot)
+**/target/
+**/out/
+*.class
+*.jar
+*.war
+*.ear
+**/build/
+**/volumes/
+
+# Archivos de configuración de Maven (Java)
+.mvn/
+**/pom.xml.versionsBackup
+**/pom.xml.releaseBackup
+
+# Archivos de configuración de Gradle (Java)
+.gradle/
 
 # Archivos temporales del sistema
 *.swp

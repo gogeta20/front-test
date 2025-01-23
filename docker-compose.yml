@@ -1,15 +1,21 @@
 version: '3.9'
 services:
-    front_test:
+    nginx_proxy:
         build:
             context: .
-            dockerfile: devops/Dockerfile
-        container_name: front_test
-        ports:
-            - "80:5173"
-        entrypoint: [ "/app/entrypoint.sh" ]
+            dockerfile: devops/dockerfiles/proxy/Nginx.Dockerfile
+        container_name: nginx_proxy
+        #    volumes:
+        #      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
         volumes:
-            - ./project:/app
+            - ./conf/nginx:/src
+        ports:
+            - "80:80"
+        depends_on:
+            # - symfony_backend
+            # - django_backend
+            # - springboot_backend
+            # - front_micro
         networks:
             - app_network
 
