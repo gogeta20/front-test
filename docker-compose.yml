@@ -11,13 +11,29 @@ services:
             - ./conf/nginx:/src
         ports:
             - "80:80"
-        # depends_on:
-            # - symfony_backend
+        depends_on:
+            - symfony_backend
             # - django_backend
             # - springboot_backend
             # - front_micro
         networks:
             - app_network
+    symfony_backend:
+        build:
+            context: .
+            dockerfile: devops/dockerfiles/backend/Symfony.Dockerfile
+        container_name: symfony_backend
+        ports:
+            - "9000:9000"
+        volumes:
+            - ./project/backend/symfony:/var/www/html
+            - ./conf/symfony/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:delegated
+        command: >
+            sh -c "composer install && php-fpm"
+        networks:
+            - app_network
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
 
 networks:
     app_network:
