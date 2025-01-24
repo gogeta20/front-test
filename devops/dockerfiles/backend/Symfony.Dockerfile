@@ -24,7 +24,8 @@ RUN pecl install xdebug \
 
 WORKDIR /var/www/html
 
-COPY project/back/symfony/ .
+COPY . .
+# COPY project/back/symfony/ .
 
 RUN mkdir -p /var/www/html/var/cache
 RUN mkdir -p /var/www/html/var/log
